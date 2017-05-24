@@ -3,10 +3,62 @@
 <title>Assignment 3</title>
 
 <script>
+
   function getOutput(){
     var numbers = document.getElementById("numbers").value;
     var list = numbers.split(",");
   }
+  
+  //Include two more methods for findMin and findMax because I need extra credit
+  //Create a seperate Javascript file for the scripts
+  
+  findSum(array){
+    var sum = 0;
+    for (var i = 0; i < array.length; i++){
+      sum += array[i];
+      }
+     return sum;
+  }
+  
+  findMean(array){
+    var mean = findSum(array)/array.length;
+    return mean;
+  }
+  
+  findMedian(array){
+    array.sort(function(a,b){return a-b});
+    var middle = (array.length - 1)/2;
+    return array[middle];
+  }
+  
+   findMode(array){
+    array.sort(function(a,b){return a-b});
+    var max = 0;
+    var result;
+    var freq = 0;
+    for (var i=0; i<array.length; i++){
+      if (array[i] == array[i + 1]){
+        freq++;
+        }
+       else {
+        freq = 0;
+        }
+        if (freq > max){
+          result = array[i];
+          max = freq;
+          }
+     }
+     return result;
+   }
+   
+   findVariance(array){
+   
+   }
+   
+   findStandardDeviation(array){
+   
+   }
+  
   
 </script>
 </head>
@@ -14,6 +66,9 @@
 
 <p>List your numbers and seperate each number with a comma:</p?
 <input type="text" id="number">
+
+//insert a button for "Calculations
+//create a 6x3 table to display the results
 
 </body>
 </html>
