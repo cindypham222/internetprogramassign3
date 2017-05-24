@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Assignment 3</title>
+
+<script>
+  function getOutput(){
+    var numbers = document.getElementById("numbers").value;
+    var list = numbers.split(",");
+  }
+  
+</script>
+</head>
+<body>
+
+<p>List your numbers and seperate each number with a comma:</p?
+<input type="text" id="number">
+
+</body>
+</html>
